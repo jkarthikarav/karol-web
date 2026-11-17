@@ -1,0 +1,50 @@
+:root {
+  --karol-brand-primary:#EDD3C4; --karol-brand-primary-accent:#B0673D; --karol-brand-primary-light:#FAF2EE;
+  --karol-neutral-white:#FBFEFB; --karol-neutral-white-dark:#E9ECE9; --karol-neutral-black:#060E06; --karol-neutral-black-light:#A6A9A6;
+  --karol-j-dark:#002500; --karol-j-light:#6D826D; --karol-j-accent:#0AE30A;
+  --karol-a-dark:#1F3B77; --karol-a-light:#AFB9CE; --karol-a-accent:#375FB6;
+  --karol-k-dark:#4E0026; --karol-k-light:#B392A2; --karol-k-accent:#F61682;
+  --karol-gradient-j:linear-gradient(45deg,var(--karol-j-dark),var(--karol-j-light));
+  --karol-gradient-a:linear-gradient(45deg,var(--karol-a-dark),var(--karol-a-light));
+  --karol-gradient-k:linear-gradient(45deg,var(--karol-k-dark),var(--karol-k-light));
+  --karol-font-primary:'Lexend',sans-serif; --karol-font-display:'Poltawski Nowy',serif; --karol-font-logo:'Modern Antiqua',serif;
+  --karol-font-weight-thick:800; --karol-font-weight-regular:600; --karol-font-weight-thin:400;
+  --karol-body-base:18px; --karol-body-small:12.75px; --karol-body-smaller:9px;
+  --karol-heading-larger:144px; --karol-heading-large:102px; --karol-heading-medium:72px; --karol-heading-small:50px; --karol-heading-smaller:36px; --karol-heading-smallest:25.5px;
+  --karol-line-height-heading:1.2; --karol-line-height-body:1.4; --karol-line-height-default:1.3;
+  --karol-radius-rounded:54px; --karol-radius-circle:999px; --karol-radius-subtle:18px;
+  --karol-border-width-thick:16px; --karol-border-width-regular:8px; --karol-border-width-thin:2px;
+  --karol-border-style-outset:outset; --karol-border-style-solid:solid; --karol-layout-gutter:2%;
+}
+@media(max-width:1200px){:root{--karol-body-base:16px;--karol-body-small:12px;--karol-body-smaller:10px;--karol-heading-larger:102px;--karol-heading-large:72px;--karol-heading-medium:50px;--karol-heading-small:36px;--karol-heading-smaller:26px;--karol-heading-smallest:20px}}
+@media(max-width:968px){:root{--karol-body-base:12px;--karol-body-small:10px;--karol-body-smaller:9px;--karol-heading-larger:72px;--karol-heading-large:50px;--karol-heading-medium:36px;--karol-heading-small:30px;--karol-heading-smaller:25.5px;--karol-heading-smallest:18px}}
+*,*::before,*::after{box-sizing:border-box}
+html{font-family:var(--karol-font-primary);color:var(--karol-neutral-black);background:var(--karol-neutral-white)}
+body{margin:0;padding:0}button{font:inherit}
+.karol-type-body{font-family:var(--karol-font-primary);font-size:var(--karol-body-base);line-height:var(--karol-line-height-body)}
+.karol-type-label{font-family:var(--karol-font-primary);font-size:var(--karol-body-small);line-height:var(--karol-line-height-default)}
+.karol-type-heading{font-family:var(--karol-font-display);font-size:var(--karol-heading-medium);line-height:var(--karol-line-height-heading);font-weight:var(--karol-font-weight-thick)}
+.karol-button{display:inline-flex;align-items:center;justify-content:center;width:100%;padding:12px 24px;margin-block:12px;border:2px solid transparent;border-radius:var(--karol-radius-subtle);font-family:var(--karol-font-primary);font-weight:var(--karol-font-weight-regular);line-height:var(--karol-line-height-default);cursor:pointer;text-decoration:none;transition:background-color 200ms ease,border-color 200ms ease}
+.karol-button:focus-visible{outline:3px solid var(--karol-a-accent);outline-offset:3px}
+.karol-button:disabled{opacity:.5;cursor:not-allowed}
+.karol-button--large{font-size:var(--karol-body-base)}.karol-button--medium{font-size:var(--karol-body-small)}.karol-button--fit{width:fit-content}
+.karol-button--filled-j,.karol-button--filled-a,.karol-button--filled-k{color:var(--karol-neutral-white)}
+.karol-button--filled-j{background:var(--karol-j-dark)}.karol-button--filled-a{background:var(--karol-a-dark)}.karol-button--filled-k{background:var(--karol-k-dark)}
+.karol-button--filled-j:hover,.karol-button--filled-a:hover,.karol-button--filled-k:hover{background:var(--karol-neutral-black);border-color:var(--karol-neutral-white)}
+.karol-button--tonal-j{background:var(--karol-j-light)}.karol-button--tonal-a{background:var(--karol-a-light)}.karol-button--tonal-k{background:var(--karol-k-light)}
+.karol-button--tonal-j,.karol-button--tonal-a,.karol-button--tonal-k{color:var(--karol-neutral-black)}
+.karol-button--tonal-j:hover,.karol-button--tonal-a:hover,.karol-button--tonal-k:hover{background:var(--karol-neutral-white);border-color:var(--karol-neutral-black-light)}
+.karol-button--elevated{background:var(--karol-neutral-white);color:var(--karol-neutral-black);border-color:var(--karol-neutral-white-dark);box-shadow:0 2px 4px rgb(6 14 6 / 15%)}
+.karol-button--elevated:hover{background:var(--karol-neutral-white-dark)}
+.karol-button--outlined{background:transparent;color:var(--karol-neutral-black);border-color:var(--karol-neutral-black-light)}
+.karol-button--outlined:hover{background:var(--karol-neutral-white-dark);border-color:var(--karol-neutral-black)}
+.karol-button--text{background:transparent;color:var(--karol-neutral-black)}.karol-button--text:hover{background:var(--karol-neutral-white-dark)}
+.karol-card-grid{display:flex;width:100%;gap:2%;margin:2rem auto}
+.karol-image-card{width:69%;min-height:50vh;overflow:hidden;border-radius:var(--karol-radius-subtle)}
+.karol-image-card img{display:block;width:100%;height:100%;object-fit:cover}
+.karol-text-card{display:flex;width:29%;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:2rem;overflow:hidden;border-radius:var(--karol-radius-subtle);background:var(--karol-neutral-white)}
+.karol-text-card--top{justify-content:flex-start}
+.karol-image-feature{display:flex;width:23.5%;min-height:30vh;flex-direction:column;justify-content:flex-end;overflow:hidden;border-radius:var(--karol-radius-subtle);color:var(--karol-neutral-white);background-image:linear-gradient(to bottom,rgb(0 0 0 / 35%),rgb(0 0 0 / 72%)),var(--karol-card-image);background-position:center;background-size:cover}
+.karol-image-feature--full{width:100%;min-height:60vh}
+.karol-image-feature__content{padding:16px}.karol-image-feature--full .karol-image-feature__content{padding:24px}
+@media(max-width:968px){.karol-card-grid{flex-direction:column;gap:24px}.karol-image-card,.karol-text-card,.karol-image-feature{width:100%}.karol-image-card,.karol-image-feature{min-height:280px}}
